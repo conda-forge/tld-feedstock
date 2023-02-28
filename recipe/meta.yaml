@@ -1,5 +1,5 @@
 {% set name = "tld" %}
-{% set version = "0.12.7" %}
+{% set version = "0.13" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/tld-{{ version }}.tar.gz
-  sha256: b6f7729e19ce0ebc77ba0a65b70d6213aeb952c01ff605e1299aae5fb7621c5e
+  sha256: 93dde5e1c04bdf1844976eae440706379d21f4ab235b73c05d7483e074fb5629
 
 build:
   number: 0
