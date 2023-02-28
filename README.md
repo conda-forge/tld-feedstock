@@ -1,11 +1,11 @@
-About tld
-=========
+About tld-feedstock
+===================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/tld-feedstock/blob/main/LICENSE.txt)
 
 Home: https://github.com/barseghyanartur/tld
 
 Package license: LGPL-2.1-or-later
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/tld-feedstock/blob/main/LICENSE.txt)
 
 Summary: Extracts the top level domain (TLD) from the URL given.
 
