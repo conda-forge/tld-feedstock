@@ -7,11 +7,11 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/tld-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/tld-{{ version }}.tar.gz
   sha256: 93dde5e1c04bdf1844976eae440706379d21f4ab235b73c05d7483e074fb5629
 
 build:
-  number: 0
+  number: 1
   noarch: python
   entry_points:
     - update-tld-names = tld.utils:update_tld_names_cli
@@ -20,9 +20,10 @@ build:
 requirements:
   host:
     - pip
-    - python >=3.6
+    - python {{ python_min }}
+    - setuptools
   run:
-    - python >=3.6
+    - python >={{ python_min }}
 
 test:
   imports:
@@ -32,6 +33,7 @@ test:
     - update-tld-names --help
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://github.com/barseghyanartur/tld
