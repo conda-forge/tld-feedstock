@@ -1,5 +1,5 @@
 {% set name = "tld" %}
-{% set version = "0.13" %}
+{% set version = "0.13.1" %}
 
 
 package:
@@ -8,10 +8,10 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/tld-{{ version }}.tar.gz
-  sha256: 93dde5e1c04bdf1844976eae440706379d21f4ab235b73c05d7483e074fb5629
+  sha256: 75ec00936cbcf564f67361c41713363440b6c4ef0f0c1592b5b0fbe72c17a350
 
 build:
-  number: 1
+  number: 0
   noarch: python
   entry_points:
     - update-tld-names = tld.utils:update_tld_names_cli
