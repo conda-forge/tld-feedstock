@@ -15,7 +15,7 @@ source:
 build:
   number: 1
   noarch: python
-  script: ${{ PYTHON }} -m pip install . -vv
+  script: ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
   python:
     entry_points:
       - update-tld-names = tld.utils:update_tld_names_cli
@@ -33,7 +33,9 @@ tests:
       imports:
         - tld
       pip_check: true
-      python_version: ${{ python_min }}
+      python_version:
+        - ${{ python_min }}
+        - "*"
   - requirements:
       run:
         - pip
